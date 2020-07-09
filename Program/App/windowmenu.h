@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+#include "../Treygol/Treygol.h" ////asdsadasdas
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class WindowMenu; }
 QT_END_NAMESPACE

@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <windowmenu.h>
 
+#include "../Treygol/Treygol.h" //// sdfsdfsdfs
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

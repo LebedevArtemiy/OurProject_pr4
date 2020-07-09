@@ -1,6 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    App \
+    Treygol \
+    App
 
-
+CONFIG += ordered
