@@ -1,7 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    Treygol \
+    Library \
     App
 
-CONFIG += ordered
+

@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <windowmenu.h>
 
-#include "../Treygol/Treygol.h" //// sdfsdfsdfs
+#include "../Library/Library.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
