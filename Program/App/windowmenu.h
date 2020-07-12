@@ -2,7 +2,6 @@
 #define WINDOWMENU_H
 
 #include <QWidget>
-
 #include "../Library/Library.h"
 
 QT_BEGIN_NAMESPACE

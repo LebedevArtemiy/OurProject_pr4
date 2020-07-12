@@ -37,3 +37,4 @@ double Treygol::getK3() const
 {
     return  k3;
 }
+
