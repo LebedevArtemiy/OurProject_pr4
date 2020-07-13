@@ -1,6 +1,10 @@
-QT       += core gui
+QT -= gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+DEFINES += LIBRARY_LIBRARY
+
+TEMPLATE = lib
+CONFIG += staticlib
 
 CONFIG += c++11
 
@@ -16,37 +20,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    circlewindow.cpp \
-    mainwindow.cpp \
-    main.cpp \
-    parallelogramwindow.cpp \
-    rectanglewindow.cpp \
-    trapezoidwindow.cpp \
-    trianglewindow.cpp \
-    windowmenu.cpp \
-    windowvivod.cpp
+    library.cpp
 
 HEADERS += \
-    circlewindow.h \
-    mainwindow.h \
-    parallelogramwindow.h \
-    rectanglewindow.h \
-    trapezoidwindow.h \
-    trianglewindow.h \
-    windowmenu.h \
-    windowvivod.h
-
-FORMS += \
-    circlewindow.ui \
-    mainwindow.ui \
-    parallelogramwindow.ui \
-    rectanglewindow.ui \
-    trapezoidwindow.ui \
-    trianglewindow.ui \
-    windowmenu.ui \
-    windowvivod.ui
+    Library_global.h \
+    library.h
 
 # Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
+unix {
+    target.path = /usr/lib
+}
 !isEmpty(target.path): INSTALLS += target
