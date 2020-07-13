@@ -26,4 +26,8 @@ void TriangleWindow::on_pushButton_2_clicked()
 {
     this->close();
     vWindow-> show ();
+    QString  A = "-", B = "-", C = "-", D ="-", R="-", k1 = "-", k2="-", k3 ="-", k4="-", S ="-", P="-";
+    A = ui->Astorona->text();
+    B = ui->Bstorona->text();
+    C = ui->Cstorona->text();
 }
