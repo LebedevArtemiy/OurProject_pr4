@@ -16,17 +16,35 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    circlewindow.cpp \
     mainwindow.cpp \
     main.cpp \
-    windowmenu.cpp
+    parallelogramwindow.cpp \
+    rectanglewindow.cpp \
+    trapezoidwindow.cpp \
+    trianglewindow.cpp \
+    windowmenu.cpp \
+    windowvivod.cpp
 
 HEADERS += \
+    circlewindow.h \
     mainwindow.h \
-    windowmenu.h
+    parallelogramwindow.h \
+    rectanglewindow.h \
+    trapezoidwindow.h \
+    trianglewindow.h \
+    windowmenu.h \
+    windowvivod.h
 
 FORMS += \
+    circlewindow.ui \
     mainwindow.ui \
-    windowmenu.ui
+    parallelogramwindow.ui \
+    rectanglewindow.ui \
+    trapezoidwindow.ui \
+    trianglewindow.ui \
+    windowmenu.ui \
+    windowvivod.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

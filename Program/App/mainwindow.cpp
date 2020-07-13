@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     sWindow= new WindowMenu ();
     connect(sWindow, &WindowMenu::firstWindow, this, &MainWindow::show);
+    xWindow= new WindowVivod ();
+    connect(xWindow, &WindowVivod::start, this, &MainWindow::show);
 }
 
 MainWindow::~MainWindow()

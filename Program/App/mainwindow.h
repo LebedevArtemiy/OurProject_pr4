@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <windowmenu.h>
-
-#include "../Library/Library.h"
+#include "windowvivod.h"
+#include "../Library/library.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,6 +21,7 @@ public:
 private:
     Ui::MainWindow *ui;
    WindowMenu *sWindow;
+   WindowVivod *xWindow;
 private slots:
    void on_pushButton_clicked();
 };
