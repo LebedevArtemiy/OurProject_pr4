@@ -30,13 +30,12 @@ double Circle::getS() const
 Rectangle::Rectangle()
 {
 }
- void Rectangle::set(const double &side1, const double &side2, const double &side3, const double &side4)
+ void Rectangle::set(const double &side1, const double &side2,const double &side3,const double &side4)
 {
    this->side1 = side1;
-   this->side2 = side1;
-   this->side3 = side3;
-   this->side4 = side3;
-   this->perimeter = (side1+side3)*2;
+   this->side2 = side2;
+   this->perimeter = (side1+side2)*2;
+   this->area= side1*side2;
    this->angle1 =angle1=angle2=angle3=angle4=90;
 
 
@@ -47,7 +46,7 @@ double Rectangle::getperimeter() const
 }
 double Rectangle::getarea() const
 {
-    return side1*side3;
+    return area ;
 }
 double Rectangle::getside1() const
 {
@@ -55,7 +54,7 @@ double Rectangle::getside1() const
 }
 double Rectangle::getside2() const
 {
-    return side3;
+    return side2;
 }
 double Rectangle::getangle() const
 {

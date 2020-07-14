@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "windowvivod.h"
 #include "../Library/library.h"
+#include "QMessageBox"
 
 namespace Ui {
 class RectangleWindow;
@@ -18,6 +19,8 @@ signals:
 public:
     explicit RectangleWindow(QWidget *parent = nullptr);
     ~RectangleWindow();
+    QString  A = "-", B = "-", S ="-", P="-";
+    Rectangle R;
 
 private slots:
     void on_pushButton_clicked();
