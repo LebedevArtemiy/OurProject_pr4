@@ -8,7 +8,10 @@ class Treygol
 public:
 
     Treygol();
-    void set(const double &a, const double &b, const double &c);
+    void set( const double  &a, const double  &b, const double  &c);
+    double getA() const;
+    double getB() const;
+    double getC() const;
     double getP() const;
     double getS() const;
     double getK() const;

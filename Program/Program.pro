@@ -1,7 +1,9 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    App \
-    Library
+    Library \
+    App
+
+CONFIG += ordered
 
 

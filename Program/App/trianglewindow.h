@@ -2,6 +2,7 @@
 #define TRIANGLEWINDOW_H
 
 #include <QWidget>
+#include <QString>
 #include "windowvivod.h"
 #include "../Library/library.h"
 
@@ -21,12 +22,11 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-
     void on_pushButton_2_clicked();
-
 private:
     Ui::TriangleWindow *ui;
     WindowVivod *vWindow;
+
 };
 
 #endif // TRIANGLEWINDOW_H
