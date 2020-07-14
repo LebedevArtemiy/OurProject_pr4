@@ -18,6 +18,7 @@ public:
     explicit WindowVivod(QWidget *parent = nullptr);
     ~WindowVivod();
 
+
 private slots:
     void on_pushButton_clicked();
 

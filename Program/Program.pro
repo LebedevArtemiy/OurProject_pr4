@@ -5,3 +5,5 @@ SUBDIRS += \
     App
 
 CONFIG += ordered
+
+
