@@ -1,36 +1,58 @@
-#include "Library.h"
+#include "library.h"
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <iostream>
 using namespace std;
-Circle::Circle()
+Treygol::Treygol()
 {
 }
-void Circle::set(const double &r)
+void Treygol::set(const double  &a, const double  &b, const double  &c)
 {
-   this->r = r;
-   this->S = (M_PI*r*r);
-   this->P = (2*M_PI*r);
+   this->a = a;
+   this->b = b;
+   this->c = c;
+   this->P = a + b + c;
+   this->k1 = ((acos(((a*a)+(b*b)-(c*c))/(2.*a*b)))*180)/M_PI;
+   this->k2 = ((acos(((a*a)+(c*c)-(b*b))/(2.*a*c)))*180)/M_PI;
+   this->k3 = ((acos(((c*c)+(b*b)-(a*a))/(2.*c*b)))*180)/M_PI;
 }
-double Circle::getR() const
+double Treygol::getA() const
 {
-    return r;
+    return a;
 }
-
-double Circle::getP() const
+double Treygol::getB() const
+{
+    return b;
+}
+double Treygol::getC() const
+{
+    return c;
+}
+double Treygol::getP() const
 {
     return P;
 }
-
-double Circle::getS() const
+double Treygol::getS() const
 {
-    return S;
+    return sqrt((P/2.)*((P/2.)-a)*((P/2.)-b)*((P/2.)-c));
+}
+double Treygol::getK1() const
+{
+    return  k1;
+}
+double Treygol::getK2() const
+{
+    return  k2;
+}
+double Treygol::getK3() const
+{
+    return  k3;
 }
 
 Rectangle::Rectangle()
 {
 }
- void Rectangle::set(const double &side1, const double &side2,const double &side3,const double &side4)
+ void Rectangle::set(const double &side1, const double &side2)
 {
    this->side1 = side1;
    this->side2 = side2;
@@ -60,3 +82,4 @@ double Rectangle::getangle() const
 {
     return angle1;
 }
+

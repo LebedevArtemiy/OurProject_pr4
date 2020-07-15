@@ -1,11 +1,12 @@
 #include "rectanglewindow.h"
 #include "ui_rectanglewindow.h"
-#include "QMessageBox"
-#include "QString"
+#include <QString>
+#include <QMessageBox>
 
+QString  recA="-", recB = "-", recC = "-", recD ="-", recR="-", reck1 = "-", reck2="-", reck3 ="-", reck4="-",
+reck5 = "-",  recS ="-", recP="-";
+Rectangle Rec;
 
-QString A="-",B="-",S="-",P="-";
-Rectangle R;
 RectangleWindow::RectangleWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::RectangleWindow)
@@ -28,18 +29,9 @@ void RectangleWindow::on_pushButton_clicked()
 
 void RectangleWindow::on_pushButton_2_clicked()
 {
-    this->close();
+    recA=ui->Astorona->text();
+    recB=ui->Bstorona->text();
+    Rec.set(recA.toDouble(), recB.toDouble());
+  this->close();
     vWindow-> show ();
-    A = ui->Astorona->text();
-    B = ui->Bstorona->text();
-    R.set(A.toDouble(),B.toDouble(),P.toDouble(),S.toDouble());
-    QMessageBox::information(this,"сторона1",QString::number(R.getside1()));
-    QMessageBox::information(this,"сторона2",QString::number(R.getside2()));
-    QMessageBox::information(this,"периметр",QString::number(R.getperimeter()));
-    QMessageBox::information(this,"площадь",QString::number(R.getarea()));
-    QMessageBox::information(this,"углы",QString::number(R.getangle()));
-
 }
-
-
-

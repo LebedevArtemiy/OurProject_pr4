@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <windowmenu.h>
 #include "windowvivod.h"
-#include "../Library/library.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

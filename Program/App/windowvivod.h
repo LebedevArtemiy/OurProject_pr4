@@ -2,6 +2,7 @@
 #define WINDOWVIVOD_H
 
 #include <QWidget>
+#include <QString>
 #include "../Library/library.h"
 
 namespace Ui {
