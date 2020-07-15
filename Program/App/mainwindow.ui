@@ -23,13 +23,6 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="text">
-       <string>История ввода фигур</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QPushButton" name="pushButton_3">
       <property name="text">
        <string>Закрыть приложение</string>

@@ -2,6 +2,7 @@
 #define CIRCLEWINDOW_H
 
 #include <QWidget>
+#include <QString>
 #include "windowvivod.h"
 #include "../Library/library.h"
 
@@ -23,6 +24,8 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
+
+
 
 private:
     Ui::CircleWindow *ui;

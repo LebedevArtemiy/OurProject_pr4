@@ -44,5 +44,16 @@ private:
 
 };
 
+class Circle
+{
+public:
+    Circle();
+    void set(const double &r);
+    double getR() const;
+    double getP() const;
+    double getS() const;
+private:
+    double r, S, P;
+};
 
 #endif // LIBRARY_H

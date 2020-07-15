@@ -83,3 +83,28 @@ double Rectangle::getangle() const
     return angle1;
 }
 
+Circle::Circle()
+{
+}
+void Circle::set(const double &r)
+{
+   this->r = r;
+   this->S = (M_PI*r*r);
+   this->P = (2*M_PI*r);
+}
+double Circle::getR() const
+{
+    return r;
+}
+
+double Circle::getP() const
+{
+    return P;
+}
+
+double Circle::getS() const
+{
+    return S;
+}
+
+

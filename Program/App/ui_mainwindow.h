@@ -26,7 +26,6 @@ public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QPushButton *pushButton;
-    QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -44,11 +43,6 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
         verticalLayout->addWidget(pushButton);
-
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-
-        verticalLayout->addWidget(pushButton_2);
 
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
@@ -74,7 +68,6 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\264\320\260\321\202\321\214 \321\204\320\270\320\263\321\203\321\200\321\203", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "\320\230\321\201\321\202\320\276\321\200\320\270\321\217 \320\262\320\262\320\276\320\264\320\260 \321\204\320\270\320\263\321\203\321\200", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\272\321\200\321\213\321\202\321\214 \320\277\321\200\320\270\320\273\320\276\320\266\320\265\320\275\320\270\320\265", nullptr));
     } // retranslateUi
 
