@@ -24,4 +24,25 @@ private:
 
 };
 
+class Rectangle
+{
+public:
+    Rectangle();
+    void set(const double &side1, const double &side2);
+       double getperimeter() const;
+       double getarea() const;
+       double getside1() const;
+       double getside2() const;
+       double getangle() const;
+
+private:
+    double side1, side2; // стороны прямоугольника
+    double angle1, angle2, angle3, angle4; // углы прямоугольника
+    double perimeter; //периметр
+    double area; //площадь
+
+
+};
+
+
 #endif // LIBRARY_H

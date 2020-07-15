@@ -1,5 +1,11 @@
 #include "rectanglewindow.h"
 #include "ui_rectanglewindow.h"
+#include <QString>
+#include <QMessageBox>
+
+QString  recA="-", recB = "-", recC = "-", recD ="-", recR="-", reck1 = "-", reck2="-", reck3 ="-", reck4="-",
+reck5 = "-",  recS ="-", recP="-";
+Rectangle Rec;
 
 RectangleWindow::RectangleWindow(QWidget *parent) :
     QWidget(parent),
@@ -23,6 +29,9 @@ void RectangleWindow::on_pushButton_clicked()
 
 void RectangleWindow::on_pushButton_2_clicked()
 {
-    this->close();
+    recA=ui->Astorona->text();
+    recB=ui->Bstorona->text();
+    Rec.set(recA.toDouble(), recB.toDouble());
+  this->close();
     vWindow-> show ();
 }

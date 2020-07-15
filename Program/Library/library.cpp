@@ -49,3 +49,37 @@ double Treygol::getK3() const
     return  k3;
 }
 
+Rectangle::Rectangle()
+{
+}
+ void Rectangle::set(const double &side1, const double &side2)
+{
+   this->side1 = side1;
+   this->side2 = side2;
+   this->perimeter = (side1+side2)*2;
+   this->area= side1*side2;
+   this->angle1 =angle1=angle2=angle3=angle4=90;
+
+
+}
+double Rectangle::getperimeter() const
+{
+    return perimeter;
+}
+double Rectangle::getarea() const
+{
+    return area ;
+}
+double Rectangle::getside1() const
+{
+    return side1;
+}
+double Rectangle::getside2() const
+{
+    return side2;
+}
+double Rectangle::getangle() const
+{
+    return angle1;
+}
+
