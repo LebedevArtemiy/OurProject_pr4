@@ -1,6 +1,7 @@
 #include "library.h"
 #define _USE_MATH_DEFINES
-#include <math.h>
+#include <cmath>
+#include "math.h"
 #include <iostream>
 using namespace std;
 Treygol::Treygol()
@@ -107,4 +108,42 @@ double Circle::getS() const
     return S;
 }
 
+Paralelogram::Paralelogram()
+{
+}
+void Paralelogram::set(const double & osnovanie, const double & bok_storona, const double &k1)
+{
+   this->osnovanie = osnovanie;
+   this->bok_storona = bok_storona;
+   this->P = 2 * (osnovanie + bok_storona);
+   this->k1 =k1;
+    this->S = osnovanie * bok_storona * sin(k1*M_PI/180);
+   this->k2 = 180-k1;
+
+}
+
+double Paralelogram::getP() const
+{
+    return P;
+}
+double Paralelogram::getS() const
+{
+    return S;
+}
+double Paralelogram::getK1() const
+{
+    return  k1;
+}
+double Paralelogram::getK2() const
+{
+    return  k2;
+}
+double Paralelogram::getA() const
+{
+    return  osnovanie;
+}
+double Paralelogram::getB() const
+{
+    return  bok_storona;
+}
 

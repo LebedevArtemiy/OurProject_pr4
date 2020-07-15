@@ -56,4 +56,19 @@ private:
     double r, S, P;
 };
 
+class Paralelogram
+{
+public:
+    Paralelogram();
+    void set(const double &osnovanie, const double &bok_storona, const double &k1);
+    double getP() const;
+    double getS() const;
+    double getK1() const;
+    double getK2() const;
+    double getA() const;
+    double getB() const;
+private:
+     double osnovanie, bok_storona, S, P, k1, k2;
+};
+
 #endif // LIBRARY_H

@@ -41,118 +41,118 @@ SUBTARGETS    =  \
 
 sub-Library-qmake_all:  FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
-	cd Library\ && $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
+	cd Library\ && $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd Library\ && $(MAKE) -f Makefile qmake_all
 sub-Library: $(MAKEFILE) FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
 sub-Library-make_first-ordered: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
 sub-Library-make_first: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
 sub-Library-all-ordered: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
 sub-Library-all: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
 sub-Library-clean-ordered: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
 sub-Library-clean: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
 sub-Library-distclean-ordered: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
 sub-Library-distclean: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
 sub-Library-install_subtargets-ordered: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
 sub-Library-install_subtargets: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
 sub-Library-uninstall_subtargets-ordered: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 sub-Library-uninstall_subtargets: FORCE
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 sub-App-qmake_all: sub-Library-qmake_all FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
-	cd App\ && $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
+	cd App\ && $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd App\ && $(MAKE) -f Makefile qmake_all
 sub-App: $(MAKEFILE) FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
 sub-App-make_first-ordered: sub-Library-make_first-ordered  FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
 sub-App-make_first: FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
 sub-App-all-ordered: sub-Library-all-ordered  FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
 sub-App-all: FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
 sub-App-clean-ordered: sub-Library-clean-ordered  FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
 sub-App-clean: FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
 sub-App-distclean-ordered: sub-Library-distclean-ordered  FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
 sub-App-distclean: FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
 sub-App-install_subtargets-ordered: sub-Library-install_subtargets-ordered  FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
 sub-App-install_subtargets: FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
 sub-App-uninstall_subtargets-ordered: sub-Library-uninstall_subtargets-ordered  FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 sub-App-uninstall_subtargets: FORCE
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 
 Makefile: Program.pro ..\..\..\Qt\5.15.0\msvc2015_64\mkspecs\win32-msvc\qmake.conf ..\..\..\Qt\5.15.0\msvc2015_64\mkspecs\features\spec_pre.prf \
 		..\..\..\Qt\5.15.0\msvc2015_64\mkspecs\common\angle.conf \
@@ -562,41 +562,41 @@ uninstall_subtargets: sub-Library-uninstall_subtargets-ordered sub-App-uninstall
 sub-Library-debug_ordered:
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
 sub-App-debug_ordered: sub-Library-debug_ordered 
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
 debug: sub-Library-debug_ordered sub-App-debug_ordered
 
 sub-Library-release_ordered:
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
 sub-App-release_ordered: sub-Library-release_ordered 
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
 release: sub-Library-release_ordered sub-App-release_ordered
 
 sub-Library-check_ordered:
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
 sub-App-check_ordered: sub-Library-check_ordered 
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
 check: sub-Library-check_ordered sub-App-check_ordered
 
 sub-Library-benchmark_ordered:
 	@if not exist Library\ mkdir Library\ & if not exist Library\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
+	cd Library\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\Library\Library.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
 sub-App-benchmark_ordered: sub-Library-benchmark_ordered 
 	@if not exist App\ mkdir App\ & if not exist App\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\Program\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
+	cd App\ && ( if not exist Makefile $(QMAKE) -o Makefile D:\Download\ProgramF\Program\App\App.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
 benchmark: sub-Library-benchmark_ordered sub-App-benchmark_ordered
 install:install_subtargets  FORCE
 
