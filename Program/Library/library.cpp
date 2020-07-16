@@ -147,3 +147,64 @@ double Paralelogram::getB() const
     return  bok_storona;
 }
 
+Trapezoid::Trapezoid()
+{
+}
+void Trapezoid::set(const double &a, const double &b,  const double &c,  const double &d)
+ {
+     this->a =a;
+    this->b=b;
+    this->c =c;
+    this->d =d;
+    this->h=sqrt(c*c-pow(((pow((a-b),2)+c*c-d*d)/(2*(a-b))), 2));
+    this->k1= asin(h/b)*180/M_PI;
+    this->k4=asin(h/d)*180/M_PI;
+    this->k2=180-k1;
+    this->k3=180-k4;
+    this->P=a+b+c+d;
+
+ }
+ double Trapezoid::getP() const
+ {
+     return P;
+ }
+ double Trapezoid::getS() const
+ {
+     return ((a+b)/2)*h ;
+ }
+ double Trapezoid::geta() const
+ {
+     return a;
+ }
+ double Trapezoid::getb() const
+ {
+     return b;
+ }
+ double Trapezoid::getc() const
+ {
+     return c;
+ }
+ double Trapezoid::getd() const
+ {
+     return d;
+ }
+ double Trapezoid::geth() const
+ {
+     return h;
+ }
+ double Trapezoid::getk1() const
+ {
+     return k1;
+ }
+ double Trapezoid::getk2() const
+ {
+     return k2;
+ }
+ double Trapezoid::getk3() const
+ {
+     return k3;
+ }
+ double Trapezoid::getk4() const
+ {
+     return k4;
+ }

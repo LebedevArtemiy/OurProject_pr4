@@ -71,4 +71,25 @@ private:
      double osnovanie, bok_storona, S, P, k1, k2;
 };
 
+class Trapezoid
+{
+public:
+    Trapezoid();
+    void set(const double &a, const double &b,  const double &c,  const double &d);
+    double getP() const;
+    double getS() const;
+    double getk1() const;
+    double getk2() const;
+    double getk3() const;
+    double getk4() const;
+    double geta() const;
+    double getb() const;
+    double getc() const;
+    double getd() const;
+    double geth() const;
+private:
+    double a, b, c, d, h, P, S, k1, k2, k3, k4;
+};
+
+
 #endif // LIBRARY_H

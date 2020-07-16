@@ -4,6 +4,7 @@
 #include "trianglewindow.cpp"
 #include "rectanglewindow.cpp"
 #include "parallelogramwindow.cpp"
+#include "trapezoidwindow.cpp"
 #include "trianglewindow.h"
 #include <QString>
 #include "../Library/library.h"
@@ -29,6 +30,8 @@ void WindowVivod::on_pushButton_clicked()
             Cik3 ="-", Cik4="-", Cik5 = "-",  CiS ="-", CiP="-";
     parA="-", parB = "-", parC = "-", parD ="-", parR="-", park1 = "-", park2="-", park3 ="-", park4="-",
     park5 = "-",  parS ="-", parP="-";
+    trA="-", trB = "-", trC = "-", trD ="-", trR="-", trk1 = "-", trk2="-",
+     trk3 ="-", trk4="-",trk5 = "-",  trS ="-", trP="-";
     this->close();
     emit sWindow();
 }
@@ -103,26 +106,51 @@ void WindowVivod::on_pushButton_2_clicked()
     }
     if (park1!="-")
     {
-            A = QString::number(Par.getA());
-            ui->showA->setText(A);
-            B = QString::number(Par.getB());
-            ui->showB->setText(B);
-            C = QString::number(Par.getA());
-            ui->showC->setText(C);
-            D = QString::number(Par.getB());
-            ui->showD->setText(D);
-            S = QString::number(Par.getS());
-            ui->showS->setText(S);
-            P = QString::number(Par.getP());
-            ui->showP->setText(P);
-            k1 = QString::number(Par.getK1());
-            ui->showAB->setText(k1);
-            k2 = QString::number(Par.getK2());
-            ui->showBC->setText(k2);
-            ui->showCA->setText(k5);
-            ui->showCD->setText(k1);
-            ui->showDA->setText(k2);
-            ui->showR->setText(R);
+            parA = QString::number(Par.getA());
+            ui->showA->setText(parA);
+            parB = QString::number(Par.getB());
+            ui->showB->setText(parB);
+            parC = QString::number(Par.getA());
+            ui->showC->setText(parC);
+            parD = QString::number(Par.getB());
+            ui->showD->setText(parD);
+            parS = QString::number(Par.getS());
+            ui->showS->setText(parS);
+            parP = QString::number(Par.getP());
+            ui->showP->setText(parP);
+            park1 = QString::number(Par.getK1());
+            ui->showAB->setText(park1);
+            park2 = QString::number(Par.getK2());
+            ui->showBC->setText(park2);
+            ui->showCA->setText(park5);
+            ui->showCD->setText(park1);
+            ui->showDA->setText(park2);
+            ui->showR->setText(parR);
+    }
+    if((trA!="-")&&(trB!="-")&&(trC!="-")&&(trD!="-"))
+    {
+        trA = QString::number(Tr.geta());
+        ui->showA->setText(trA);
+        trB = QString::number(Tr.getb());
+        ui->showB->setText(trB);
+        trC = QString::number(Tr.getc());
+        ui->showC->setText(trC);
+        trD = QString::number(Tr.getd());
+        ui->showD->setText(trD);
+        trS = QString::number(Tr.getS());
+        ui->showS->setText(trS);
+        trP = QString::number(Tr.getP());
+        ui->showP->setText(trP);
+        trk1 = QString::number(Tr.getk1());
+        ui->showAB->setText(trk1);
+        trk2 = QString::number(Tr.getk2());
+        ui->showBC->setText(trk2);
+        trk3 = QString::number(Tr.getk3());
+        ui->showCD->setText(trk3);
+        trk4 = QString::number(Tr.getk4());
+        ui->showDA->setText(trk4);
+        ui->showCA->setText(trk5);
+        ui->showR->setText(trR);
     }
 }
 

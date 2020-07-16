@@ -11,7 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -20,7 +23,16 @@ QT_BEGIN_NAMESPACE
 class Ui_TrapezoidWindow
 {
 public:
-    QWidget *widget;
+    QGroupBox *groupBox;
+    QLabel *label;
+    QLabel *label_2;
+    QLineEdit *Astorona;
+    QLineEdit *Bstorona;
+    QLineEdit *Cstorona;
+    QLabel *label_3;
+    QLabel *label_4;
+    QLineEdit *Dstorona;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
@@ -30,18 +42,45 @@ public:
         if (TrapezoidWindow->objectName().isEmpty())
             TrapezoidWindow->setObjectName(QString::fromUtf8("TrapezoidWindow"));
         TrapezoidWindow->resize(400, 300);
-        widget = new QWidget(TrapezoidWindow);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(190, 260, 195, 30));
-        horizontalLayout = new QHBoxLayout(widget);
+        groupBox = new QGroupBox(TrapezoidWindow);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(50, 10, 291, 201));
+        label = new QLabel(groupBox);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(10, 30, 47, 16));
+        label_2 = new QLabel(groupBox);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(10, 70, 47, 16));
+        Astorona = new QLineEdit(groupBox);
+        Astorona->setObjectName(QString::fromUtf8("Astorona"));
+        Astorona->setGeometry(QRect(30, 30, 251, 20));
+        Bstorona = new QLineEdit(groupBox);
+        Bstorona->setObjectName(QString::fromUtf8("Bstorona"));
+        Bstorona->setGeometry(QRect(30, 70, 251, 20));
+        Cstorona = new QLineEdit(groupBox);
+        Cstorona->setObjectName(QString::fromUtf8("Cstorona"));
+        Cstorona->setGeometry(QRect(30, 110, 251, 20));
+        label_3 = new QLabel(groupBox);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(10, 110, 47, 13));
+        label_4 = new QLabel(groupBox);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(10, 140, 47, 13));
+        Dstorona = new QLineEdit(groupBox);
+        Dstorona->setObjectName(QString::fromUtf8("Dstorona"));
+        Dstorona->setGeometry(QRect(30, 140, 251, 20));
+        layoutWidget = new QWidget(groupBox);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(60, 170, 195, 30));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(widget);
+        pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
         horizontalLayout->addWidget(pushButton);
 
-        pushButton_2 = new QPushButton(widget);
+        pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
         horizontalLayout->addWidget(pushButton_2);
@@ -55,6 +94,11 @@ public:
     void retranslateUi(QWidget *TrapezoidWindow)
     {
         TrapezoidWindow->setWindowTitle(QCoreApplication::translate("TrapezoidWindow", "Form", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("TrapezoidWindow", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\277\320\260\321\200\320\260\320\274\320\265\321\202\321\200\321\213:", nullptr));
+        label->setText(QCoreApplication::translate("TrapezoidWindow", "A", nullptr));
+        label_2->setText(QCoreApplication::translate("TrapezoidWindow", "B", nullptr));
+        label_3->setText(QCoreApplication::translate("TrapezoidWindow", "C", nullptr));
+        label_4->setText(QCoreApplication::translate("TrapezoidWindow", "D", nullptr));
         pushButton->setText(QCoreApplication::translate("TrapezoidWindow", "\320\235\320\260\320\267\320\260\320\264", nullptr));
         pushButton_2->setText(QCoreApplication::translate("TrapezoidWindow", "\320\224\320\260\320\273\320\265\320\265", nullptr));
     } // retranslateUi
