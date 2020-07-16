@@ -6,11 +6,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    sWindow= new WindowMenu ();
-    connect(sWindow, &WindowMenu::firstWindow, this, &MainWindow::show);
-    xWindow= new WindowVivod ();
-    connect(xWindow, &WindowVivod::start, this, &MainWindow::show);
-}
+    sWindow= new WindowMenu (); // инициализация окна выбора фигуры
+    connect(sWindow, &WindowMenu::firstWindow, this, &MainWindow::show); // подключение к слоту запуска главного окна в окне выбора фигуры
+} // при получении сигнала firstWindow в окне выбора фигуры, вызывается показывание главного окна
 
 MainWindow::~MainWindow()
 {
@@ -19,7 +17,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    sWindow -> show ();
-    this -> close ();
+    sWindow -> show (); // открывается окно выбора фигуры
+    this -> close (); // закрывается главное окно
 }
 

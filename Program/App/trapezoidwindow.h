@@ -13,7 +13,7 @@ class TrapezoidWindow : public QWidget
 {
     Q_OBJECT
 signals:
-    void secondWindow ();
+    void secondWindow (); // сигнал, с помощью которого вызывается окно выбора фигуры
 public:
     explicit TrapezoidWindow(QWidget *parent = nullptr);
     ~TrapezoidWindow();

@@ -1,11 +1,10 @@
 #include "trapezoidwindow.h"
 #include "ui_trapezoidwindow.h"
 #include <QString>
-#include <QMessageBox>
 
  QString  trA="-", trB = "-", trC = "-", trD ="-", trR="-", trk1 = "-", trk2="-",
- trk3 ="-", trk4="-",trk5 = "-",  trS ="-", trP="-";
-Trapezoid Tr;
+ trk3 ="-", trk4="-",trk5 = "-",  trS ="-", trP="-";  // объявление всех переменных вывода
+Trapezoid Tr; //объявление объекта класса фигуры
 
 TrapezoidWindow::TrapezoidWindow(QWidget *parent) :
     QWidget(parent),
@@ -22,14 +21,14 @@ TrapezoidWindow::~TrapezoidWindow()
     delete ui;
 }
 
-void TrapezoidWindow::on_pushButton_clicked()
+void TrapezoidWindow::on_pushButton_clicked() // кнопка назад: закрытие этого окна и возвращение к окну выбора фигуры
 {
-    this->close();
-    emit secondWindow();
+    this->close(); //данное окно закрывается
+    emit secondWindow(); // сигнал показывания предыдущего окна
 }
 
-void TrapezoidWindow::on_pushButton_2_clicked()
-{
+void TrapezoidWindow::on_pushButton_2_clicked() //кнопка далее: получение введенных переменных, помещение их в сеттер
+{                                               // закрытие этого окна, открытие окна вывода
     trA=ui->Astorona->text();
     trB=ui->Bstorona->text();
     trC=ui->Cstorona->text();

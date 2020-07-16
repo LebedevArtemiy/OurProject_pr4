@@ -36,6 +36,8 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QLabel *label_5;
+    QLabel *label_6;
 
     void setupUi(QWidget *TrapezoidWindow)
     {
@@ -85,6 +87,12 @@ public:
 
         horizontalLayout->addWidget(pushButton_2);
 
+        label_5 = new QLabel(TrapezoidWindow);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(20, 230, 341, 21));
+        label_6 = new QLabel(TrapezoidWindow);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setGeometry(QRect(20, 260, 301, 21));
 
         retranslateUi(TrapezoidWindow);
 
@@ -101,6 +109,8 @@ public:
         label_4->setText(QCoreApplication::translate("TrapezoidWindow", "D", nullptr));
         pushButton->setText(QCoreApplication::translate("TrapezoidWindow", "\320\235\320\260\320\267\320\260\320\264", nullptr));
         pushButton_2->setText(QCoreApplication::translate("TrapezoidWindow", "\320\224\320\260\320\273\320\265\320\265", nullptr));
+        label_5->setText(QCoreApplication::translate("TrapezoidWindow", "a - \320\275\320\270\320\266\320\275\320\265\320\265 \320\276\321\201\320\275\320\276\320\262\320\260\320\275\320\270\320\265, c - \320\262\320\265\321\200\321\205\320\275\320\265\320\265", nullptr));
+        label_6->setText(QCoreApplication::translate("TrapezoidWindow", "b, d - \320\261\320\276\320\272\320\276\320\262\321\213\320\265 \321\201\321\202\320\276\321\200\320\276\320\275\321\213 \321\202\321\200\320\260\320\277\320\265\321\206\320\270\320\270", nullptr));
     } // retranslateUi
 
 };

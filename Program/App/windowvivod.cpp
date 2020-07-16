@@ -1,8 +1,8 @@
 #include "windowvivod.h"
 #include "ui_windowvivod.h"
-#include "circlewindow.cpp"
-#include "trianglewindow.cpp"
-#include "rectanglewindow.cpp"
+#include "circlewindow.cpp" // подключение .cpp файлов ввода параметров фигур
+#include "trianglewindow.cpp" // в которых были объявлены глобальные переменные вывода параметров и объекты классов фигур
+#include "rectanglewindow.cpp" //после нажатия кнопки далее, работа с присвоенными и выведенными значениями класса  происходит здесь
 #include "parallelogramwindow.cpp"
 #include "trapezoidwindow.cpp"
 #include "trianglewindow.h"
@@ -22,24 +22,24 @@ WindowVivod::~WindowVivod()
     delete ui;
 }
 
-void WindowVivod::on_pushButton_clicked()
+void WindowVivod::on_pushButton_clicked() // кнопка назад: закрытие этого окна и возвращение к ввода параметров, также "обнуление" переменных вывода
 {
     A="-", B = "-", C = "-", D ="-", R="-", k1 = "-", k2="-", k3 ="-", k4="-", k5 = "-",  S ="-", P="-";
     recA="-", recB = "-", recC = "-", recD ="-", recR="-", reck1 = "-", reck2="-", reck3 ="-", reck4="-",
-    reck5 = "-",  recS ="-", recP="-" ; CiA="-", CiB = "-", CiC = "-", CiD ="-", CiR="-", Cik1 = "-", Cik2="-",
+    reck5 = "-",  recS ="-", recP="-" ; CiA="-", CiB = "-", CiC = "-", CiD ="-", CiR="-", Cik1 = "-", Cik2="-", // "обнуление" всех переменных вывода
             Cik3 ="-", Cik4="-", Cik5 = "-",  CiS ="-", CiP="-";
     parA="-", parB = "-", parC = "-", parD ="-", parR="-", park1 = "-", park2="-", park3 ="-", park4="-",
     park5 = "-",  parS ="-", parP="-";
     trA="-", trB = "-", trC = "-", trD ="-", trR="-", trk1 = "-", trk2="-",
      trk3 ="-", trk4="-",trk5 = "-",  trS ="-", trP="-";
-    this->close();
-    emit sWindow();
+    this->close(); //данное окно закрывается
+    emit sWindow(); // сигнал показывания предыдущего окна
 }
 
-void WindowVivod::on_pushButton_2_clicked()
+void WindowVivod::on_pushButton_2_clicked() // кнопка вывести
 {
-    if((QString::number(T.getA())!="-")&&(D=="-"))
-    {
+    if((A!="-")&&(D=="-")) //если переменные вывода не пустые у определенной фигуры, то выводит ее параметры
+    {                                          // которые не нужны в данной фигуры остаются с прочерками
         A = QString::number(T.getA());
         ui->showA->setText(A);
         B = QString::number(T.getB());
@@ -61,9 +61,9 @@ void WindowVivod::on_pushButton_2_clicked()
         ui->showDA->setText(k5);
         ui->showR->setText(R);
     }
-    if (Rec.getangle()==90)
+    if (Rec.getangle()==90) // проверка на прямоугольник: если в классе угол стал равен 90, то значения были введены
     {
-        recA = QString::number(Rec.getside1());
+        recA = QString::number(Rec.getside1());  // значит нужно вывести его параметры
         ui->showA->setText(recA);
         recB = QString::number(Rec.getside2());
         ui->showB->setText(recB);
@@ -86,7 +86,7 @@ void WindowVivod::on_pushButton_2_clicked()
         ui->showCA->setText(reck4);
         ui->showR->setText(recR);
     }
-    if ( CiR!="-")
+    if ( CiR!="-") //проверка на вывод окружности
     {
         ui->showA->setText(CiA);
         ui->showB->setText(CiB);
@@ -104,7 +104,7 @@ void WindowVivod::on_pushButton_2_clicked()
         CiR = QString::number(Ci.getR());
         ui->showR->setText(CiR);
     }
-    if (park1!="-")
+    if (park1!="-") // проверка фигуры (параллелограм или нет)
     {
             parA = QString::number(Par.getA());
             ui->showA->setText(parA);
@@ -127,7 +127,7 @@ void WindowVivod::on_pushButton_2_clicked()
             ui->showDA->setText(park2);
             ui->showR->setText(parR);
     }
-    if((trA!="-")&&(trB!="-")&&(trC!="-")&&(trD!="-"))
+    if((trA!="-")&&(trB!="-")&&(trC!="-")&&(trD!="-")) // проверка на вывод трапеции
     {
         trA = QString::number(Tr.geta());
         ui->showA->setText(trA);

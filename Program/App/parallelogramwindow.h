@@ -13,12 +13,12 @@ class ParallelogramWindow : public QWidget
 {
     Q_OBJECT
 signals:
-    void secondWindow ();
+    void secondWindow (); // сигнал, с помощью которого вызывается окно выбора фигуры
 public:
     explicit ParallelogramWindow(QWidget *parent = nullptr);
     ~ParallelogramWindow();
 
-private slots:
+private slots: // добавление нажатия двух кнопок
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();

@@ -4,18 +4,19 @@
 #include "math.h"
 #include <iostream>
 using namespace std;
-Treygol::Treygol()
+Treygol::Treygol() //Конструктор по умолчанию
 {
 }
-void Treygol::set(const double  &a, const double  &b, const double  &c)
+void Treygol::set(const double  &a, const double  &b, const double  &c) // установка всех значений
 {
    this->a = a;
    this->b = b;
    this->c = c;
-   this->P = a + b + c;
-   this->k1 = ((acos(((a*a)+(b*b)-(c*c))/(2.*a*b)))*180)/M_PI;
-   this->k2 = ((acos(((a*a)+(c*c)-(b*b))/(2.*a*c)))*180)/M_PI;
-   this->k3 = ((acos(((c*c)+(b*b)-(a*a))/(2.*c*b)))*180)/M_PI;
+   this->P = a + b + c; // нахождение периметра
+   this->S = sqrt((P/2.)*((P/2.)-a)*((P/2.)-b)*((P/2.)-c)); // нахождение площади
+   this->k1 = ((acos(((a*a)+(b*b)-(c*c))/(2.*a*b)))*180)/M_PI; // нахождение угла между сторонами A и B
+   this->k2 = ((acos(((a*a)+(c*c)-(b*b))/(2.*a*c)))*180)/M_PI; // нахождение угла между сторонами A и C
+   this->k3 = ((acos(((c*c)+(b*b)-(a*a))/(2.*c*b)))*180)/M_PI; // нахождение угла между сторонами C и B
 }
 double Treygol::getA() const
 {
@@ -35,7 +36,7 @@ double Treygol::getP() const
 }
 double Treygol::getS() const
 {
-    return sqrt((P/2.)*((P/2.)-a)*((P/2.)-b)*((P/2.)-c));
+    return S;
 }
 double Treygol::getK1() const
 {
@@ -55,13 +56,15 @@ Rectangle::Rectangle()
 }
  void Rectangle::set(const double &side1, const double &side2)
 {
-   this->side1 = side1;
-   this->side2 = side2;
-   this->perimeter = (side1+side2)*2;
-   this->area= side1*side2;
-   this->angle1 =angle1=angle2=angle3=angle4=90;
+     this->side1 = side1; //присваивание значений
 
+     this->side2 = side2;
 
+     this->perimeter = (side1+side2)*2; //вычисление периметра
+
+     this->area= side1*side2; //вычисление площади
+
+     this->angle1 =angle1=angle2=angle3=angle4=90; // углы по 90 градусов
 }
 double Rectangle::getperimeter() const
 {
@@ -111,18 +114,18 @@ double Circle::getS() const
 Paralelogram::Paralelogram()
 {
 }
-void Paralelogram::set(const double & osnovanie, const double & bok_storona, const double &k1)
+void Paralelogram::set(const double & osnovanie, const double & bok_storona, const double &k1)  // присвоение 2 сторон и угла между ними
 {
    this->osnovanie = osnovanie;
    this->bok_storona = bok_storona;
-   this->P = 2 * (osnovanie + bok_storona);
+   this->P = 2 * (osnovanie + bok_storona); //высчитывание остальных параметров на основе введенных в сеттер
    this->k1 =k1;
     this->S = osnovanie * bok_storona * sin(k1*M_PI/180);
    this->k2 = 180-k1;
 
 }
 
-double Paralelogram::getP() const
+double Paralelogram::getP() const //функционал геттеров (возврат переменной)
 {
     return P;
 }
@@ -152,11 +155,11 @@ Trapezoid::Trapezoid()
 }
 void Trapezoid::set(const double &a, const double &b,  const double &c,  const double &d)
  {
-     this->a =a;
+     this->a =a; // присваивание введенных сторон в класс
     this->b=b;
     this->c =c;
     this->d =d;
-    this->h=sqrt(c*c-pow(((pow((a-b),2)+c*c-d*d)/(2*(a-b))), 2));
+    this->h=sqrt(c*c-pow(((pow((a-b),2)+c*c-d*d)/(2.*(a-b))), 2)); // просчитывание остальных переменных класса
     this->k1= asin(h/b)*180/M_PI;
     this->k4=asin(h/d)*180/M_PI;
     this->k2=180-k1;
